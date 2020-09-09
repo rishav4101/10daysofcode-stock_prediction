@@ -1,0 +1,3 @@
+yfinance dataset github : https://github.com/ranaroussi/yfinance
+all company ticker values : https://stockanalysis.com/stocks/
+basic graph reading knowledge : https://www.thestreet.com/how-to/read-stocks-14948162#:~:text=A%20stock%20chart%20or%20table%20is%20a%20set,other%20company%20financial%20information.%2052-Week%20High%20and%20Low
