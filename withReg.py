@@ -31,26 +31,27 @@ prices = prices.drop(['Date'], axis=1)
 
 # convert to lists
 
+
 # This is a list
 last_day_prices = json.loads((requests.get('https://cloud.iexapis.com/stable/stock/aapl/chart/1d?token=sk_8a186cf264dc42d4963f5793b92ea911')).content) 
 
 for price in last_day_prices:
-    #price.date
-    #price.time
-    #price.open
+    datetime_str = price['date'] + " " + price['minute']
+    datetime_object = datetime.datetime.strptime(datetime_str, "%Y-%m-%d %H:%M")
+    timestamp = datetime.datetime.timestamp(datetime_object)
+    open_price = price['open']
+    df = pd.DataFrame([[open_price, int(timestamp)]], columns=['Open', 'timestamp'])
+    prices = prices.append(df, ignore_index=True)
 
-    #single timestamp
-
-    #to dataframe timestamp or open
 
 this_day_prices = json.loads((requests.get("https://cloud.iexapis.com/stable/stock/aapl/intraday-prices/batch?token=sk_8a186cf264dc42d4963f5793b92ea911")).content)
 
+
 for price in this_day_prices:
-    #price.date
-    #price.time
-    #price.open
-
-    #single timestamp
-
-    #to dataframe timestamp or open
+    datetime_str = price['date'] + " " + price['minute']
+    datetime_object = datetime.datetime.strptime(datetime_str, "%Y-%m-%d %H:%M")
+    timestamp = datetime.datetime.timestamp(datetime_object)
+    open_price = price['open']
+    df = pd.DataFrame([[open_price, int(timestamp)]], columns=['Open', 'timestamp'])
+    prices = prices.append(df, ignore_index=True)
 
