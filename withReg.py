@@ -8,6 +8,21 @@ import time
 import json
 import datetime
 import requests
+from numpy import arange
+from numpy import set_printoptions
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import ElasticNet
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+from sklearn.metrics import mean_squared_error
+from matplotlib import pyplot as plt 
 
 # yfinance dataframe
 yf.pdr_override() 
@@ -55,3 +70,58 @@ for price in this_day_prices:
     df = pd.DataFrame([[open_price, int(timestamp)]], columns=['Open', 'timestamp'])
     prices = prices.append(df, ignore_index=True)
 
+
+dataset = prices.values #array
+
+X = dataset[:,1].reshape(-1,1)
+Y = dataset[:,0:1]
+
+validation_size = 0.15
+seed = 7
+
+X_train, X_validation, Y_train, Y_validation = train_test_split(X, Y, test_size=validation_size, random_state=seed)
+
+# set_printoptions(precision=3)
+
+
+# Test options and evaluation metric
+num_folds = 10
+seed = 7
+scoring = "r2"
+
+# Spot-Check Algorithms
+models = []
+models.append((' LR ', LinearRegression()))
+models.append((' LASSO ', Lasso()))
+models.append((' EN ', ElasticNet()))
+models.append((' KNN ', KNeighborsRegressor()))
+models.append((' CART ', DecisionTreeRegressor()))
+models.append((' SVR ', SVR()))
+
+# evaluate each model in turn
+results = []
+names = []
+for name, model in models:
+    kfold = KFold(n_splits=num_folds, random_state=seed, shuffle=True)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+    # print(cv_results)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
+
+# Define model
+model = DecisionTreeRegressor()
+# Fit to model
+model.fit(X_train, Y_train)
+# predict
+predictions = model.predict(X)
+print(mean_squared_error(Y, predictions))
+
+# %matplotlib inline 
+
+fig= plt.figure(figsize=(12,6))
+
+plt.plot(X,Y)
+plt.plot(X,predictions)
+plt.show()
