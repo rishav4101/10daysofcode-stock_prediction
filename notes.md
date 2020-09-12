@@ -11,6 +11,7 @@ We'll create an application which will predict Stock Prices of a company using *
 
 We will use libraries like `numpy`, `pandas`, `matplotlib`, `sklearn` and a few others. You may have heard about these libraries or you may be encountering their names for the first time and it may seem like jargon but don't worry, we will walkthrough all of them and make you familiar with them
 
+### NumPy
 Let's start with <code>NumPy</code>, Shall we? 
 **NumPy**, which for Numerical Python is an Open Source python library used for working with arrays. It consists of multidimensional array objects and also has functions for working in domain of Linear Algebra, fourier transform and matrices. 
 
@@ -25,3 +26,22 @@ The NumPy module does not come pre-installed with the python distribution and we
 You can also refer to the following resources to know further about NumPy
 - [w3schools](https://www.w3schools.com/python/numpy_intro.asp)
 - [NumPy documentation](https://numpy.org/doc/stable/)
+
+### Pandas
+Next we move on to Pandas, which is a very popular open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
+
+Following are some of the key features of Pandas
+
+- Fast and efficient DataFrame object with default and customized indexing.
+- Tools for loading data into in-memory data objects from different file formats.
+- Data alignment and integrated handling of missing data.
+- Reshaping and pivoting of date sets.
+- Label-based slicing, indexing and subsetting of large data sets.
+- Columns from a data structure can be deleted or inserted.
+- Group by data for aggregation and transformations.
+- High performance merging and joining of data.
+- Time Series functionality.
+
+You can also refer to the following resources to know further about NumPy
+- [tutorialspoint](https://www.tutorialspoint.com/python_pandas/index.htm)
+- [Pandas Documentation](https://pandas.pydata.org/docs/)
