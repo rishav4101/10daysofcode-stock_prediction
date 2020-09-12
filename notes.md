@@ -28,7 +28,7 @@ You can also refer to the following resources to know further about NumPy
 - [NumPy documentation](https://numpy.org/doc/stable/)
 
 ### Pandas
-Next we move on to Pandas, which is a very popular open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
+Next we would like to talk about Pandas, which is a very popular open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
 
 Following are some of the key features of Pandas
 
