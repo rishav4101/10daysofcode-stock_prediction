@@ -22,7 +22,9 @@ NumPy aims to provide an array object that is up to 50x faster that traditional 
 
 The NumPy module does not come pre-installed with the python distribution and we have to install it seperately. It is often used with libraries such as scipy and matplotlib. We will see the installation later.
 
-You can also refer to the following resources
-    * https://www.w3schools.com/python/numpy_intro.asp
-    * https://numpy.org/doc/stable/
+You can also refer to the following resources to know further about NumPy
+https://www.w3schools.com/python/numpy_intro.asp
+https://numpy.org/doc/stable/
 
+http://github.com - automatic!
+[GitHub](http://github.com)
