@@ -42,6 +42,6 @@ Following are some of the key features of Pandas
 - High performance merging and joining of data.
 - Time Series functionality.
 
-You can also refer to the following resources to know further about NumPy
+You can also refer to the following resources to know further about Pandas
 - [tutorialspoint](https://www.tutorialspoint.com/python_pandas/index.htm)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
