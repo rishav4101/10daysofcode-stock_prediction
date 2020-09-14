@@ -33,7 +33,7 @@ You can refer to the following tutorial which will demonstrate simple operations
 
 [NumPy Arrays](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
 
-After going through the above tutoril, you now should be familiar with performing basic operations on Arrays.
+After going through the above tutorial, you now should be familiar with performing basic operations on Arrays.
 
 You can also refer to the following resources to know further about NumPy
 - [w3schools](https://www.w3schools.com/python/numpy_intro.asp)
