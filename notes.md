@@ -63,6 +63,7 @@ You can also refer to the following resources to know further about Pandas
 ### Matplotlib
 **Matplotlib** is an open source plotting library  which creates static , animated and interactive visualizations in python. It is largely used for the 2-dimensional plotting of arrays. It is a multi platform data visualization library which has been built upon NumPy arrays. One of its remarkable feature is that it lets the user interact with large chunk of data in very easily representable visuals. Matplotlib consists of several plots like line bar, pie chart, histogram, etc. Matplotlib comes with large number of plots ,which helps in determining trends and building correlation such as the line bar, scatter bar, histogram etc.
 
+## A Short Tutorial
 We have discussed in breif about some of the important libraries which are being used for data analysis. And So now, we would provide a very beginner friendly guide which will demonstrate how to use these libraries and will make you equipped so that you are able to tackle the actual project on your own.
 
 Also, we will have to install these libraries into our system as they do not come pre-installed with python.
@@ -106,7 +107,8 @@ print(dataset.head(10)) # prints the first 10 rows of the dataset.
 
 # Statistical Summary
 print(dataset.describe()) 
-#prints the summary of each column head(attribute).This helps in finding maximum, minimum, count, and even some percentiles.
+# prints the summary of each column head(attribute)
+# This helps in finding maximum, minimum, count, and even some percentiles.
 ```
 
 
@@ -138,7 +140,7 @@ pyplot.show()
 ```
 ![Multivariate Plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Scatter-Matrix-Plot-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
 
-So now you must have got an idea of what exactly does these libraries and help us to do and you might have also got an intuition as to where you can use them in you projects. Although we have only discussed the topics in very brief and there a whole lot of things that these libraries offer and what we can do with them but this should be a really good checkpoint we have reached.
+So now you must have an idea of what these libraries help us to do and you might have also got an intuition as to where you can use them in you projects. Although we have only discussed the topics in very brief and there a whole lot of things that these libraries offer and what we can do with them but this should be a really good checkpoint we have reached.
 
 Now coming to our project, as we are dealing with the stock market and trying to predict stock prices the most important thing is **being able to Read Stocks**
 
@@ -166,5 +168,6 @@ A Stock Chart is a little different than the basic information on the stock. Sto
 
 (Rishav ek stock chart ka image laga dena aur usme particular parts ko highlight kar dena)
 
-1. 
+### 1. The Price and Time Axes
+Every stock chart has two axes - the price axis and the time axis. The horizontal (or bottom) axis shows the time period selected for the stock chart. This can generally be customized to show anything from a year time period (or even multiple years) to a day. 
 2. 
