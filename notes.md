@@ -1,6 +1,6 @@
 # Stock Prediction
 
-"The field of study that gives computers the ability to learn without being explicitly programmed" is what Arthur Samuel described Machine Learning.
+"The field of study that gives computers the ability to learn without being explicitly programmed" is what Arthur Samuel described as Machine Learning.
 
 **Machine Learning** or rather **ML** has found its applications in various fields in the past few years, some of which include Virtual Personal Assistants, Online Customer Support, Product Recommendations etc.
 
@@ -121,7 +121,6 @@ We generally study two types of plots:
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 pyplot.show()
 ```
-
 ![Univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Box-and-Whisker-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
 
 
@@ -130,7 +129,6 @@ pyplot.show()
 dataset.hist()
 pyplot.show()
 ```
-
 ![Histogram of univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Histogram-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
 
 ```
@@ -138,5 +136,35 @@ pyplot.show()
 scatter_matrix(dataset)
 pyplot.show()
 ```
-
 ![Multivariate Plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Scatter-Matrix-Plot-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
+
+So now you must have got an idea of what exactly does these libraries and help us to do and you might have also got an intuition as to where you can use them in you projects. Although we have only discussed the topics in very brief and there a whole lot of things that these libraries offer and what we can do with them but this should be a really good checkpoint we have reached.
+
+Now coming to our project, as we are dealing with the stock market and trying to predict stock prices the most important thing is **being able to Read Stocks**
+
+## How to Read Stocks
+Reading stock charts, or stock quotes, is a crucial skill in being able to understand how a stock is performing, what is happening in the broader market and how that stock is projected to perform.
+
+Stocks have **quote pages** or **charts**, which give both basic and more detailed information about the stock, its performance and the company on the whole. So, the next question that comes up is what makes up a stock chart? 
+
+### Stock Charts
+A Stock Chart is a set of information on a particular company's stock that generally shows information about price changes, current trading price, historical highs and lows, dividends, trading volume and other company financial information.
+
+Also we would like to familiarise you some some basic terminologies of the stock market
+
+#### Ticker Symbol
+The ticker symbol is the symbol that is used on the stock exchange to delineate a given stock. For example, Apple's ticker is (AAPL) while Snapchat's ticker is (SNAP).
+
+#### Open Price
+The open price is simply the price at which the stock opened on any given day
+
+#### Close Price
+The close price is perhaps more significant than the open price for most stocks. The close is the price at which the stock stopped trading during normal trading hours (after-hours trading can impact the stock price as well). If a stock closes above the previous close, it is considered an upward movement for the stock. Vice versa, if a stock's close price is below the previous day's close, the stock is showing a downward movement.
+
+## How to Read a Stock Chart
+A Stock Chart is a little different than the basic information on the stock. Stock charts include plot lines which represent the price movements of the given stock. While the price lines are generally represented in a line or a mountain chart form, the price movements over a given period (generally six months to one year) is represented by thin lines.
+
+(Rishav ek stock chart ka image laga dena aur usme particular parts ko highlight kar dena)
+
+1. 
+2. 
