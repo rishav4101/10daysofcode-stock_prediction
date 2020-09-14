@@ -21,14 +21,28 @@ In Python we have lists that serve the purpose of arrays, but they are slow to p
 
 NumPy aims to provide an array object that is up to 50x faster that traditional Python lists.
 
-The NumPy module does not come pre-installed with the python distribution and we have to install it seperately. It is often used with libraries such as scipy and matplotlib. We will see the installation later.
+The NumPy module does not come pre-installed with the python distribution and we have to install it seperately. It is often used with libraries such as scipy and matplotlib. 
+
+Machine Learning data is universerally represented as arrays and in Python, data is almost universerally represented as NumPy arrays. To get started working on real data we need to know how to manipute and access the data correctly in NumPy arrays.
+
+You can refer to the following tutorial which will demonstrate simple operations on our data such as :
+
+- Converting list data to NumPy arrays
+- Accessing data using pythonic indexing and slicing
+- Resizing of the data 
+
+[NumPy Arrays](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
+
+After going through the above tutoril, you now should be familiar with performing basic operations on Arrays.
 
 You can also refer to the following resources to know further about NumPy
 - [w3schools](https://www.w3schools.com/python/numpy_intro.asp)
 - [NumPy documentation](https://numpy.org/doc/stable/)
 
+So, lets continue and move on to our next topic **Pandas**
+
 ### Pandas
-Next we would like to talk about Pandas, which is a very popular open-source Python Library providing high-performance data manipulation and analysis tool using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
+Pandas is a very popular open-source Python Library which provides high-performance data manipulation and analysis tools using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
 
 Following are some of the key features of Pandas
 
@@ -45,3 +59,8 @@ Following are some of the key features of Pandas
 You can also refer to the following resources to know further about Pandas
 - [tutorialspoint](https://www.tutorialspoint.com/python_pandas/index.htm)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
+
+### Matplotlib
+**Matplotlib** is an open source plotting library  which creates static , animated and interactive visualizations in python. It is largely used for the 2-dimensional plotting of arrays. It is a multi platform data visualization library which has been built upon NumPy arrays. One of its remarkable feature is that it lets the user interact with large chunk of data in very easily representable visuals. Matplotlib consists of several plots like line bar, pie chart, histogram, etc.
+Matplotlib comes with large number of plots ,which helps in determining trends and building correlation such as the line bar, scatter bar, histogram etc.
+
