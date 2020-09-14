@@ -64,3 +64,38 @@ You can also refer to the following resources to know further about Pandas
 **Matplotlib** is an open source plotting library  which creates static , animated and interactive visualizations in python. It is largely used for the 2-dimensional plotting of arrays. It is a multi platform data visualization library which has been built upon NumPy arrays. One of its remarkable feature is that it lets the user interact with large chunk of data in very easily representable visuals. Matplotlib consists of several plots like line bar, pie chart, histogram, etc.
 Matplotlib comes with large number of plots ,which helps in determining trends and building correlation such as the line bar, scatter bar, histogram etc.
 
+Now, we will import all the modules which will be used in this tutorial.
+### import libraries
+## from pandas import read_csv
+## from pandas.plotting import scatter_matrix
+## from matplotlib import pyplot
+
+In this Beginner friendly, step by step guide, we will now understand how to load a dataset and understand its structure with help of statistical summaries and data visualization.
+
+We are going to use the iris flowers dataset. This dataset is famous because it is used as the “hello world” dataset in machine learning and statistics by pretty much everyone.The dataset contains 150 observations of iris flowers. There are four columns of measurements of the flowers in centimeters. The fifth column is the species of the flower observed. All observed flowers belong to one of three species.
+We will load the iris data from csv file URL.
+
+Now, lets take a look at the data we have loaded.Some of the ways to look at the data are as follows:
+
+### Dimensions of the dataset :
+**dataset.shape** gives the number of rows(instances) and coulmns(attributes),the dataset contains.
+### Peeking into tjhe dataset:
+**dataset.head(10)** gives only the first 10 rows of the dataset.
+### Statistical Summary:
+**dataset.describe()** gives the summary of each column head(attribute).This helps in finding maximum, minimum, count, and even some percentiles.
+
+Now, we have a basic understanding about the data.So, lets dive into the data visualization part.
+There are majorly two types of plots :
+**Univariate plots** to undersatnd each attribute and **Multivariate plots** to understand the relationship between varoius attributes.
+
+### box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
+
+![Univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Box-and-Whisker-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
+
+![Histogram of univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Histogram-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
+
+![Multivariate Plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Scatter-Matrix-Plot-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
+
+
