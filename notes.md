@@ -169,5 +169,6 @@ A Stock Chart is a little different than the basic information on the stock. Sto
 (Rishav ek stock chart ka image laga dena aur usme particular parts ko highlight kar dena)
 
 ### 1. The Price and Time Axes
-Every stock chart has two axes - the price axis and the time axis. The horizontal (or bottom) axis shows the time period selected for the stock chart. This can generally be customized to show anything from a year time period (or even multiple years) to a day. 
-2. 
+Every stock chart has two axes - the price axis and the time axis. The horizontal (or bottom) axis shows the time period selected for the stock chart. The vertical (or side) axis shows the price of the stock. These two axes help plot the trend lines that represent the stock's price over time, and are the framework for the whole stock chart. 
+
+### 2. The Trend Line
