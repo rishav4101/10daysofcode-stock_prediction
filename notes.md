@@ -144,7 +144,7 @@ So now you must have an idea of what these libraries help us to do and you might
 
 Now coming to our project, as we are dealing with the stock market and trying to predict stock prices the most important thing is **being able to Read Stocks**
 
-## How to Read Stocks
+## How to Read Stocks ? 
 Reading stock charts, or stock quotes, is a crucial skill in being able to understand how a stock is performing, what is happening in the broader market and how that stock is projected to perform.
 
 Stocks have **quote pages** or **charts**, which give both basic and more detailed information about the stock, its performance and the company on the whole. So, the next question that comes up is what makes up a stock chart? 
@@ -163,7 +163,7 @@ The open price is simply the price at which the stock opened on any given day
 #### Close Price
 The close price is perhaps more significant than the open price for most stocks. The close is the price at which the stock stopped trading during normal trading hours (after-hours trading can impact the stock price as well). If a stock closes above the previous close, it is considered an upward movement for the stock. Vice versa, if a stock's close price is below the previous day's close, the stock is showing a downward movement.
 
-## How to Read a Stock Chart
+## How to Read a Stock Chart ?
 A Stock Chart is a little different than the basic information on the stock. Stock charts include plot lines which represent the price movements of the given stock. While the price lines are generally represented in a line or a mountain chart form, the price movements over a given period (generally six months to one year) is represented by thin lines.
 
 ### 1. The Price and Time Axes
