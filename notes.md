@@ -199,3 +199,33 @@ Also to download the stock prices data of a particular company using the `yfianc
 
 [All stock ticker symbols](https://stockanalysis.com/stocks/)
 
+Now, download the stock prices data of company using `yfinance` and store the data in a two dimensional array.
+
+(after loading data, how to convert into 2d array left)
+
+Basic visualization of the dataframe is done by plotting the graph of **opening price of the stock** vs. **date**. This plot is done using `Seaborn` library.
+### Now, what is Seaborn ?
+
+**Seaborn** is a open-source python library for making statistical graphs.**Seaborn Line Plots** depict the relationship between continuous as well as categorical values in a continuous data point format.
+In order to start with Line Plots, we need to install and import the Seaborn Library into the Python environment. We will be using Matplotlib library to plot the data and show it in a proper visualized manner.
+We can supply discrete values or use data sets to create a **Seaborn line plot**.
+
+***Syntax:
+    seaborn.lineplot(x, y, data)
+    x: Data variable for the x-axis
+    y: The data variable for the y-axis
+    data: The object pointing to the entire data set or data values***
+
+Prediction of stock prices is determined using some machine learning algorithms.
+### Spot-Check Algorithms :
+**Linear Regression*** - Linear regression is a supervised learning algorithm and tries to model the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data.
+For a linear regression to be a good choice, there needs to be a linear relation between independent variable(s) and target variable. There are many tools to explore the relationship among variables such as scatter plots and correlation matrix. 
+
+**K-nearest neighbors (kNN)** -is a supervised learning algorithm that can be used to solve both classification and regression tasks. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
+kNN classifier determines the class of a data point by majority voting principle. For instance, if k is set to 15, the classes of 15 closest points are checked.
+
+**Lasso** - lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the statistical model it produces.
+
+**Elastic-Net** - The Elastic-Net is a regularised regression method that linearly combines both penalties i.e. L1 and L2 of the Lasso and Ridge regression methods. It is useful when there are multiple correlated features. The difference between Lass and Elastic-Net lies in the fact that Lasso is likely to pick one of these features at random while elastic-net is likely to pick both at once.
+
+In our **Stock-prediction project, kNN** is giving the most accurate prediction
