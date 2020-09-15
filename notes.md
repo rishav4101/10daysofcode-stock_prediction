@@ -209,7 +209,7 @@ We are getting the day-wise and this much data is not sufficiently enough to tra
 
 ![Previous day Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/chart/1d?token=sk_8a186cf264dc42d4963f5793b92ea911)
 
-So now you get the data. You can use the `requests` and `json` modules to use the date and according append it to your dataframe.
+So now you get the data. You can use the `requests` and `json` modules to use the data and accordingly append it to your dataframe.
 
 Also to further improve the performance of our results and make even more accurate predictions we also add the current day's stock prices using the follwing api endpoint
 
