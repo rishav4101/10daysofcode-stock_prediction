@@ -181,6 +181,7 @@ In addition to just the trend of the stock's prices, the stock's trading volume 
 
 The volume is generally indicated on the bottom of the stock chart in green and red bars (or sometimes blue or purple bars). The key thing to look out for when examining trading volume is spikes in trading volume, which can indicate the strength of a trend - whether it is high trading volume down or up. If a stock's price drops and the trading volume is high, it might mean that there is strength to the downward trend on the stock as opposed to a momentary blip (and vice versa if the price moves up)
 
+### An Example Stock Chart
 ![Stock Chart](https://www.thestreet.com/.image/t_share/MTY3NTM5MzU3MjA0MDk2OTEw/image-placeholder-title.jpg)
 
 So, this was little bit of knowledge about the Stock Market and how to read the Stock charts.
@@ -194,7 +195,7 @@ Bhaiya pls check if we need to include any IDE or editor setup in this guide.
 
 To work with Stock Market prices we first need to get reliable financial data. So where do we get our data from? `yfinance` solves our problem by offering a reliable, threaded, and Pythonic way to download historical market data from Yahoo! finance. And this library is installed pretty much the same way as we have installed other libraries. So go ahead and install it.
 
-Also to download the stock prices data of a particular company you will need to know their **Ticker Symbol**
+Also to download the stock prices data of a particular company using the `yfiance` library you will need to know their **Ticker Symbol**
 
 [All stock ticker symbols](https://stockanalysis.com/stocks/)
 
