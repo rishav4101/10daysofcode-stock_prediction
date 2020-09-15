@@ -166,10 +166,10 @@ The close price is perhaps more significant than the open price for most stocks.
 ## How to Read a Stock Chart
 A Stock Chart is a little different than the basic information on the stock. Stock charts include plot lines which represent the price movements of the given stock. While the price lines are generally represented in a line or a mountain chart form, the price movements over a given period (generally six months to one year) is represented by thin lines.
 
-(Rishav ek stock chart ka image laga dena aur usme particular parts ko highlight kar dena)
-
 ### 1. The Price and Time Axes
 Every stock chart has two axes - the price axis and the time axis. The horizontal (or bottom) axis shows the time period selected for the stock chart. The vertical (or side) axis shows the price of the stock. These two axes help plot the trend lines that represent the stock's price over time, and are the framework for the whole stock chart. 
+
+![Price and Time axes](https://beginningstocktrader.com/wp-content/uploads/2016/02/Basic-Chart.jpg)
 
 ### 2. The Trend Line
 This should be pretty obvious, but a good bit of the information one can glean from a stock chart can be found in the trend line. Depending on the type of chart one is looking at, one can choose different chart styles including the traditional line, mountain, bar, candlestick and other chart styles.
@@ -180,6 +180,8 @@ The  traditional **Line charts** simply track the price movements of a stock usi
 In addition to just the trend of the stock's prices, the stock's trading volume is another key factor to look at when reading a stock chart.
 
 The volume is generally indicated on the bottom of the stock chart in green and red bars (or sometimes blue or purple bars). The key thing to look out for when examining trading volume is spikes in trading volume, which can indicate the strength of a trend - whether it is high trading volume down or up. If a stock's price drops and the trading volume is high, it might mean that there is strength to the downward trend on the stock as opposed to a momentary blip (and vice versa if the price moves up)
+
+![Stock Chart](https://www.thestreet.com/.image/t_share/MTY3NTM5MzU3MjA0MDk2OTEw/image-placeholder-title.jpg)
 
 So, this was little bit of knowledge about the Stock Market and how to read the Stock charts.
 
