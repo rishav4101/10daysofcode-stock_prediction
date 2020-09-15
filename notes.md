@@ -172,3 +172,27 @@ A Stock Chart is a little different than the basic information on the stock. Sto
 Every stock chart has two axes - the price axis and the time axis. The horizontal (or bottom) axis shows the time period selected for the stock chart. The vertical (or side) axis shows the price of the stock. These two axes help plot the trend lines that represent the stock's price over time, and are the framework for the whole stock chart. 
 
 ### 2. The Trend Line
+This should be pretty obvious, but a good bit of the information one can glean from a stock chart can be found in the trend line. Depending on the type of chart one is looking at, one can choose different chart styles including the traditional line, mountain, bar, candlestick and other chart styles.
+The  traditional **Line charts** simply track the price movements of a stock using the last price of that stock.
+
+### 3. Trading Volume
+
+In addition to just the trend of the stock's prices, the stock's trading volume is another key factor to look at when reading a stock chart.
+
+The volume is generally indicated on the bottom of the stock chart in green and red bars (or sometimes blue or purple bars). The key thing to look out for when examining trading volume is spikes in trading volume, which can indicate the strength of a trend - whether it is high trading volume down or up. If a stock's price drops and the trading volume is high, it might mean that there is strength to the downward trend on the stock as opposed to a momentary blip (and vice versa if the price moves up)
+
+So, this was little bit of knowledge about the Stock Market and how to read the Stock charts.
+
+Now its time to get your hands dirty and begin setting up the project
+
+## IDE/Editor Setup
+Bhaiya pls check if we need to include any IDE or editor setup in this guide.
+
+## Initializing our project
+
+To work with Stock Market prices we first need to get reliable financial data. So where do we get our data from? `yfinance` solves our problem by offering a reliable, threaded, and Pythonic way to download historical market data from Yahoo! finance. And this library is installed pretty much the same way as we have installed other libraries. So go ahead and install it.
+
+Also to download the stock prices data of a particular company you will need to know their **Ticker Symbol**
+
+[All stock ticker symbols](https://stockanalysis.com/stocks/)
+
