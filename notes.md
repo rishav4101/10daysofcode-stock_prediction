@@ -199,7 +199,7 @@ Also to download the stock prices data of a particular company using the `yfianc
 
 [All stock ticker symbols](https://stockanalysis.com/stocks/)
 
-![yfinance GitHub Repository](https://github.com/ranaroussi/yfinance)
+[yfinance GitHub Repository](https://github.com/ranaroussi/yfinance)
 
 Use the `yfinance` library to download the dataframe. The dataframe which we get contains daily data about the stock. The downloaded dataframe gives us lot of information including Opening Price, Closing Price, Volume, etc. But we are interested in the opening prices with their corresponding dates.
 
@@ -207,13 +207,13 @@ Also it would convinient to convert the dates to their corresponding time-stamps
 
 We are getting the day-wise and this much data is not sufficiently enough to train our model properly. So we use an `api` to get the stock prices of the previous day for every minute. Following is the link to the api endpoint
 
-![Previous day Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/chart/1d?token=sk_8a186cf264dc42d4963f5793b92ea911)
+[Previous day Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/chart/1d?token=sk_8a186cf264dc42d4963f5793b92ea911)
 
 So now you get the data. You can use the `requests` and `json` modules to use the data and accordingly append it to your dataframe.
 
 Also to further improve the performance of our results and make even more accurate predictions we also add the current day's stock prices using the follwing api endpoint
 
-![Today's Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/intraday-prices/batch?token=sk_8a186cf264dc42d4963f5793b92ea911)
+[Today's Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/intraday-prices/batch?token=sk_8a186cf264dc42d4963f5793b92ea911)
 
 
 After appending the current day's prices we have sufficent number of records to train our models.
