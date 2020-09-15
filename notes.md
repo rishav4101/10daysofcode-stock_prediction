@@ -7,7 +7,7 @@
 
 ## So What exactly are we going to make?
 In these 10 days of Code we will be using ML, taming the Stock market.
-We'll create an application which will predict Stock Prices of a company using **LTSM**(Long Term Short Memory Model). (Rishav thora aur explain kar dena yeh wala part)
+We'll create an application which will predict Stock Prices of a company using Supervised Machine Learning.
 
 We will use libraries like `numpy`, `pandas`, `matplotlib`, `sklearn` and a few others. You may have heard about these libraries or you may be encountering their names for the first time and it may seem like jargon but don't worry, we will walkthrough all of them and make you familiar with them
 
@@ -199,33 +199,114 @@ Also to download the stock prices data of a particular company using the `yfianc
 
 [All stock ticker symbols](https://stockanalysis.com/stocks/)
 
-Now, download the stock prices data of company using `yfinance` and store the data in a two dimensional array.
+![yfinance GitHub Repository](https://github.com/ranaroussi/yfinance)
 
-(after loading data, how to convert into 2d array left)
+Use the `yfinance` library to download the dataframe. The dataframe which we get contains daily data about the stock. The downloaded dataframe gives us lot of information including Opening Price, Closing Price, Volume, etc. But we are interested in the opening prices with their corresponding dates.
 
-Basic visualization of the dataframe is done by plotting the graph of **opening price of the stock** vs. **date**. This plot is done using `Seaborn` library.
-### Now, what is Seaborn ?
+Also it would convinient to convert the dates to their corresponding time-stamps. And finally we will be having a dataframe which will contain our opening prices and time-stamps.
 
-**Seaborn** is a open-source python library for making statistical graphs.**Seaborn Line Plots** depict the relationship between continuous as well as categorical values in a continuous data point format.
-In order to start with Line Plots, we need to install and import the Seaborn Library into the Python environment. We will be using Matplotlib library to plot the data and show it in a proper visualized manner.
-We can supply discrete values or use data sets to create a **Seaborn line plot**.
+We are getting the day-wise and this much data is not sufficiently enough to train our model properly. So we use an `api` to get the stock prices of the previous day for every minute. Following is the link to the api endpoint
 
-***Syntax:
-    seaborn.lineplot(x, y, data)
-    x: Data variable for the x-axis
-    y: The data variable for the y-axis
-    data: The object pointing to the entire data set or data values***
+![Previous day Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/chart/1d?token=sk_8a186cf264dc42d4963f5793b92ea911)
 
-Prediction of stock prices is determined using some machine learning algorithms.
-### Spot-Check Algorithms :
-**Linear Regression*** - Linear regression is a supervised learning algorithm and tries to model the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data.
+So now you get the data. You can use the `requests` and `json` modules to use the date and according append it to your dataframe.
+
+Also to further improve the performance of our results and make even more accurate predictions we also add the current day's stock prices using the follwing api endpoint
+
+![Today's Stock Prices](https://cloud.iexapis.com/stable/stock/aapl/intraday-prices/batch?token=sk_8a186cf264dc42d4963f5793b92ea911)
+
+
+After appending the current day's prices we have sufficent number of records to train our models.
+
+### Create a Validation Dataset
+
+We need to know that the model we created is good. We are going to hold back some data that the algorithms will not get to see and we will use this data to get a second and independent idea of how accurate the best model might actually be.
+
+We will split the loaded dataset into two, 80% of which we will use to train, evaluate and select among our models, and 20% that we will hold back as a validation dataset.
+
+Following is a sample code
+
+```
+# Split-out validation dataset
+dataset = prices_dataframe.values
+X = ...
+y = ...
+# X and y are obtained by array slicing
+X_train, X_validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1)
+```
+
+The function `train_test_split()` comes from the `scikit-learn` library.
+
+**scikit-learn** (also known as sklearn) is a free software machine learning library for the Python. Scikit-learn provides a range of supervised and unsupervised learning algorithms via a consistent interface in Python.
+The library is focused on modeling data. It is not focused on loading, manipulating and summarizing data.
+
+## Building our Models
+
+We don’t know which algorithms would be good on this project or what configurations to use.
+
+And So, we are testing with 6 different alogrithms:
+- Linear Regression (LR)
+- Lasso (LASSO)
+- Elastic Net (EN)
+- KNN (K-Nearest Neighnors)
+- CART (Classification and Regression Trees)
+- SVR (Support Vector Regression)
+
+Let us briefly discuss about these algorithms
+
+## Linear Regression
+Linear regression is a supervised learning algorithm and tries to model the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data.
 For a linear regression to be a good choice, there needs to be a linear relation between independent variable(s) and target variable. There are many tools to explore the relationship among variables such as scatter plots and correlation matrix. 
 
-**K-nearest neighbors (kNN)** -is a supervised learning algorithm that can be used to solve both classification and regression tasks. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
+## K-nearest neighbors (kNN) 
+kNN is also a supervised learning algorithm that can be used to solve both classification and regression problems. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
 kNN classifier determines the class of a data point by majority voting principle. For instance, if k is set to 15, the classes of 15 closest points are checked.
 
-**Lasso** - lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the statistical model it produces.
+## Lasso
+lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the statistical model it produces.
 
-**Elastic-Net** - The Elastic-Net is a regularised regression method that linearly combines both penalties i.e. L1 and L2 of the Lasso and Ridge regression methods. It is useful when there are multiple correlated features. The difference between Lass and Elastic-Net lies in the fact that Lasso is likely to pick one of these features at random while elastic-net is likely to pick both at once.
+## Elastic-Net 
+The Elastic-Net is a regularised regression method that linearly combines both penalties i.e. L1 and L2 of the Lasso and Ridge regression methods. It is useful when there are multiple correlated features. The difference between Lasso and Elastic-Net lies in the fact that Lasso is likely to pick one of these features at random while elastic-net is likely to pick both at once.
 
-In our **Stock-prediction project, kNN** is giving the most accurate prediction
+```
+# imports
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import ElasticNet
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+```
+
+```
+# Spot-Check Algorithms
+models = []
+models.append((' LR ', LinearRegression()))
+models.append((' LASSO ', Lasso()))
+models.append((' EN ', ElasticNet()))
+models.append((' KNN ', KNeighborsRegressor()))
+models.append((' CART ', DecisionTreeRegressor()))
+models.append((' SVR ', SVR()))
+
+# evaluate each model in turn
+results = []
+names = []
+for name, model in models:
+    kfold = KFold(n_splits=num_folds, random_state=seed, shuffle=True)
+    cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+    # print(cv_results)
+    results.append(cv_results)
+    names.append(name)
+    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
+```
+The output of the above code gives us the accuracy estimations for each of our algorithms. We need to compare the models to each other and select the most accurate.
+
+Once we are able to choose which results in the best accuracy, all we have to do is to
+- Define the model
+- Fit data into our model
+- Make predictions
+
+Plot your predictions alongwith the actual data and the two plots will nearly overlap.
