@@ -31,6 +31,7 @@ A Clustering problem is where we want to discover the inherent patterns / groupi
 Identification of individual voices and music from a mesh of sounds at a cocktail party is an example of Non-Clustering Learning.
 
 You can refer to the following link to further enhance your understanding
+
 ![difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
 
 ## So What exactly are we going to make?
