@@ -4,6 +4,34 @@
 
 **Machine Learning** or rather **ML** has found its applications in various fields in the past few years, some of which include Virtual Personal Assistants, Online Customer Support, Product Recommendations etc.
 
+## A brief discussion on the types of Machine Learning
+(Feel free to skip this part if you are already familiar with it)
+
+ML can primarily be divided into two types:
+- Supervised Learning
+- Unsupervised Learning
+
+### Supervised Learning
+In supervised learning, we are given a data set and already know what our correct output should look like, having the idea that there is a relationship between the input and the output. So, Supervised Learning is the Machine Learning task, of learning a function that maps an input to an output based on example input-output pairs. Supervised Learning Problems can further be categorized into **Classification** and **Regression** problems.
+
+#### Classification
+Classification problems involve prediction of results in a discrete output. In other words we map the input variables into discrete categories. For example, given a picture of a student, we have to predict whether He/She is of High school, College, Graduate age.
+
+#### Regression
+In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. Given data about the size of houses on the real estate market, trying to predict their price. Price as a function of size is a continuous output, so this is an example of a regression problem.
+
+
+### Unsupervised Learning
+Unsupervised learning, on the other hand, allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables. The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data. Unsupervised learning problems can be further categorized into **clustering** and **non clustering** problems.
+
+#### Clustering
+A Clustering problem is where we want to discover the inherent patterns / groupings in the data, such as grouping customers by purchasing behaviour. Another example could we grouping news of similar kind from a collection of news.
+
+#### Non-Clustering
+Identification of individual voices and music from a mesh of sounds at a cocktail party is an example of Non-Clustering Learning.
+
+You can refer to the following link to further enhance your understanding
+![difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
 
 ## So What exactly are we going to make?
 In these 10 days of Code we will be using ML, taming the Stock market.
