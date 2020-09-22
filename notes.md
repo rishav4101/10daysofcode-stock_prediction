@@ -12,7 +12,7 @@ We'll create an application which will predict Stock Prices of a company using S
 We will use libraries like `numpy`, `pandas`, `matplotlib`, `sklearn` and a few others. You may have heard about these libraries or you may be encountering their names for the first time and it may seem like jargon but don't worry, we will walkthrough all of them and make you familiar with them
 
 ### NumPy
-Let's start with <code>NumPy</code>, Shall we? 
+Let's start with `NumPy`, Shall we? 
 **NumPy**, which for Numerical Python is an Open Source python library used for working with arrays. It consists of multidimensional array objects and also has functions for working in domain of Linear Algebra, fourier transform and matrices. 
 
 So Why use NumPy?
@@ -42,7 +42,7 @@ You can also refer to the following resources to know further about NumPy
 So, lets continue and move on to our next topic **Pandas**
 
 ### Pandas
-Pandas is a very popular open-source Python Library which provides high-performance data manipulation and analysis tools using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze.
+Pandas is a very popular open-source Python Library which provides high-performance data manipulation and analysis tools using its powerful data structures. The name Pandas is derived from the word Panel Data – an Econometrics from Multidimensional data.  Using Pandas, we can accomplish five typical steps in the processing and analysis of data, regardless of the origin of data — load, prepare, manipulate, model, and analyze. We will discuss about these steps in the later part of the guide.
 
 Following are some of the key features of Pandas
 
@@ -142,6 +142,27 @@ pyplot.show()
 
 So now you must have an idea of what these libraries help us to do and you might have also got an intuition as to where you can use them in you projects. Although we have only discussed the topics in very brief and there a whole lot of things that these libraries offer and what we can do with them but this should be a really good checkpoint we have reached.
 
+## Steps in Machine Learning
+While performing any Machine Learning Task, we generally follow the following steps:
+
+1. **Collecting the data** 
+This is the most obvious step. If we want to work on a ML Project we first need data. Be it the raw data from excel, access, text files, or data in the form of images, video etc., this step forms the foundation of the future learning.
+
+2. **Preparing the data**
+Bad data always leads to bad insights that leads to problems. Our prediction results depend on the quality of the data used. One needs to spend time determining the quality of data and then taking steps for fixing issues such as missing data etc.
+
+3. **Training the model**
+This step involves choosing the appropriate algorithm and representation of data in the form of the model. In layman terms, model representation is a process to represent our real-life problem statement into a mathematical model for the computer to understand. The *cleaned data* is split into three parts – Training, Validation and Testing - proportionately depending on the scenario. The training part is then given to the model to learn the relationship / function.
+
+4. **Evaluating the Model**
+Quite often, we don’t train just one model but many. So, to compare the performance of the different models, we evaluate all these models on the validation data. As it has not been seen by any of the models, validation data helps us evaluate the real-world performance of models.
+
+5. **Improving the Performance**
+Often, the performance of the model is not satisfactory at first and hence we need to revisit earlier choices we made in deciding data representations and model parameters. We may choose to use different variables (features) or even collect some more data. We might need to change the whole architecture to get the better performance in the worst case.
+
+6. **Reporting the Performance**
+Once we are satisfied by the performance of the model on the validation set, we evaluate our chosen model on the testing data set and this provides us with a fair idea of the performance of our model on real-world data that it has not seen before.
+
 Now coming to our project, as we are dealing with the stock market and trying to predict stock prices the most important thing is **being able to Read Stocks**
 
 ## How to Read Stocks ? 
@@ -188,8 +209,6 @@ So, this was little bit of knowledge about the Stock Market and how to read the 
 
 Now its time to get your hands dirty and begin setting up the project
 
-## IDE/Editor Setup
-Bhaiya pls check if we need to include any IDE or editor setup in this guide.
 
 ## Initializing our project
 
