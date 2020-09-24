@@ -322,9 +322,9 @@ We need to choose some model on which we can train this data. We try to fit a li
 
 Mathematically, we can model the problem as
 
-<center>
+<h6 align="center">
     y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
-</center>
+</h6>
 
 where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
 
