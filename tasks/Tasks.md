@@ -8,6 +8,8 @@ Create a dataframe with pandas and try out the following :
 - rename Columns
 - slice dataframe (create dataset according to your need)
 
+(The csv file containing the data is attached herewith)
+
 ## Task 2 - Plotting line Graph
 
 Plot a line graph of any two columns of the above dataframe you created using matplotlib.

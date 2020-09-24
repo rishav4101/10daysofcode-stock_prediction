@@ -322,9 +322,9 @@ We need to choose some model on which we can train this data. We try to fit a li
 
 Mathematically, we can model the problem as
 
-<center>
+<h4 align="center">
     y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
-</center>
+</h4>
 
 where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
 
@@ -355,7 +355,7 @@ You can refer to the following video to get a better visualisation of linear reg
 
 ## K-nearest neighbors (kNN) 
 
-K-nearest neighbors (KNN) algorithm is a type of supervised ML algorithm which can be used for both classification as well as regression predictive problems. However, it is mainly used for classification predictive problems in industry. KNN is a **lazy learning algorithm** because it does not have a specialized training phase and uses all the data for training while classification.KNN is also a **non-parametric learning algorithm** because it doesn’t assume anything about the underlying data.
+K-nearest neighbors (KNN) algorithm, also is a type of supervised ML algorithm which can be used for both classification as well as regression predictive problems. However, it is mainly used for classification predictive problems in industry. KNN is a **lazy learning algorithm** because it does not have a specialized training phase and uses all the data for training while classification.KNN is also a **non-parametric learning algorithm** because it doesn’t assume anything about the underlying data.
 
 ### Step-by-Step working of KNN algorithm
 **Step 1** − For implementing any algorithm, we need dataset. So during the first step of KNN, we must load the training as well as test data.
@@ -364,7 +364,7 @@ K-nearest neighbors (KNN) algorithm is a type of supervised ML algorithm which c
 
 **Step 3** − For each point in the test data, we have to follow the below procedure :-
 
-   **1)** Calculate the distance between test data and each row of training data with the help of any of the method namely: Euclidean, Manhattan or                         Hamming distance. The most commonly used method to calculate distance is Euclidean.
+   **1)** Calculate the distance between test data and each row of training data with the help of any of the method namely: Euclidean, Manhattan or Hamming distance. The most commonly used method to calculate distance is the Euclidean Method.
              
    **2)** Now, based on the distance value, sort them in ascending order.
    
