@@ -306,6 +306,53 @@ Let us briefly discuss about these algorithms
 Linear regression is a supervised learning algorithm and tries to model the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data.
 For a linear regression to be a good choice, there needs to be a linear relation between independent variable(s) and target variable. There are many tools to explore the relationship among variables such as scatter plots and correlation matrix. 
 
+Let us understand how Linear Regression works by an example of **Housing Price Prediction**
+
+Let us consider that we have **100 houses** in a city of **different prices** and just for keeping things simple we assume that the price of house depends only on **the size**. Now we need to understand the relationship between the size and the price of houses.
+
+We first collect the data of the size and prices of all the houses in the colony. Once we have the data, we need to Train the model.
+
+**Training the model :** We need to choose the model and put it into training. The following picture depicts how a real world data might look like. 
+
+![img1](https://user-images.githubusercontent.com/56895262/94113234-33f37780-fe64-11ea-92cf-6620a7ec9ffb.png)
+
+By seeing the above graph, at first you may think that it is impossible to fit a direct mathematical relationship. And, there is no direct model on which we can train this data. We split our data into training, validation and testing. A rule of thumb is to use 80% of the data for training, 10% for validation and 10% for testing. This might vary according to the problem one is working on.
+
+We need to choose some model on which we can train this data. We try to fit a linear model (i.e. A linear linear relationship between X and Y) on it. A line will fit overall trend of the data appropriately. Graphically, in two dimensions, this results in a line of best fit, although if we have more features or parameters we would refer it as a plane of best fit and so on.
+
+Mathematically, we can model the problem as
+
+```
+<center>
+    y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
+</center>
+```
+where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
+
+Our model will be a function that predicts *y* for a given *x* and our goal is to learn the model parameters (&theta;<sub>0</sub> & &theta;<sub>1</sub> in our case) But what are the best model parameters?
+
+Because of the noise in the data, there can be many solutions possible for this problem based on different values of &theta;<sub>0</sub> & &theta;<sub>1</sub>. Let’s look at a few of them.
+
+![img2](https://user-images.githubusercontent.com/56895262/94113267-41a8fd00-fe64-11ea-844e-747e7507f161.png)
+
+![img3](https://user-images.githubusercontent.com/56895262/94113290-4ec5ec00-fe64-11ea-9b8e-67a56ea6a99a.png)
+
+![img4](https://user-images.githubusercontent.com/56895262/94113328-5d140800-fe64-11ea-8d44-15534091fb63.png)
+
+But how do we decide which of these models should br picked? How to learn which one will be the best model parameters (&theta;<sub>0</sub> & &theta;<sub>1</sub>)?
+
+The best model parameters are those which gives most accurate results. The line which covers most of the trend in data will be most accurate. Alternatively, the best model parameters are those which gives least error. The line which gives least inaccurate results will be best line. We thus choose the line which minimizes error in model’s predictions.
+
+The task of finding the model parameters reduces to finding those parameters that minimize error, i.e. we have to make the model as accurate as possible. But how do we measure error?
+
+To measure error, we define a error function commonly known as **cost function** or **loss function** which measures how inaccurate/accurate the model’s predictions are.
+
+Mathematically, we look at the difference between each real output (ŷ) and our model’s prediction (y). We square these differences to avoid negative numbers and then add them up and take the average. This is a measure of how well our data fits the line and is commonly known as the **mean squared error**.
+
+
+You can refer to the following video to get a visualisation of linear regression 
+![Linear Regression Analysis](https://www.youtube.com/watch?v=zPG4NjIkCjc)
+
 ## K-nearest neighbors (kNN) 
 kNN is also a supervised learning algorithm that can be used to solve both classification and regression problems. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
 kNN classifier determines the class of a data point by majority voting principle. For instance, if k is set to 15, the classes of 15 closest points are checked.
