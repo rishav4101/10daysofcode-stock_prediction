@@ -320,13 +320,13 @@ By seeing the above graph, at first you may think that it is impossible to fit a
 
 We need to choose some model on which we can train this data. We try to fit a linear model (i.e. A linear linear relationship between X and Y) on it. A line will fit overall trend of the data appropriately. Graphically, in two dimensions, this results in a line of best fit, although if we have more features or parameters we would refer it as a plane of best fit and so on.
 
-Mathematically, we can model the problem as:
+Mathematically, we can model the problem as
 
-<h4 align="center">
+<center>
     y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
-</h4>
+</center>
 
-where **y** is the price (in 1000$) and **x** is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
+where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
 
 Our model will be a function that predicts *y* for a given *x* and our goal is to learn the model parameters (&theta;<sub>0</sub> & &theta;<sub>1</sub> in our case) But what are the best model parameters?
 
@@ -354,8 +354,71 @@ You can refer to the following video to get a better visualisation of linear reg
 [Linear Regression Analysis](https://www.youtube.com/watch?v=zPG4NjIkCjc)
 
 ## K-nearest neighbors (kNN) 
-kNN is also a supervised learning algorithm that can be used to solve both classification and regression problems. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
-kNN classifier determines the class of a data point by majority voting principle. For instance, if k is set to 15, the classes of 15 closest points are checked.
+
+K-nearest neighbors (KNN) algorithm is a type of supervised ML algorithm which can be used for both classification as well as regression predictive problems. However, it is mainly used for classification predictive problems in industry. KNN is a **lazy learning algorithm** because it does not have a specialized training phase and uses all the data for training while classification.KNN is also a **non-parametric learning algorithm** because it doesn’t assume anything about the underlying data.
+
+### Step-by-Step working of KNN algorithm
+**Step 1** − For implementing any algorithm, we need dataset. So during the first step of KNN, we must load the training as well as test data.
+
+**Step 2** − Next, we need to choose the value of K i.e. the nearest data points. K can be any integer.
+
+**Step 3** − For each point in the test data, we have to follow the below procedure :-
+
+   **1)** Calculate the distance between test data and each row of training data with the help of any of the method namely: Euclidean, Manhattan or                         Hamming distance. The most commonly used method to calculate distance is Euclidean.
+             
+   **2)** Now, based on the distance value, sort them in ascending order.
+   
+   **3)** Next, it will choose the top K rows from the sorted array.
+   
+   **4)** Now, it will assign a class to the test point based on most frequent class of these rows.
+
+Let us understand how kNN works by an example of **T-shirt Size Prediction**
+Suppose we have height, weight and T-shirt size of some customers and we need to predict the T-shirt size of a new customer given only height and weight information we have. Data including height, weight and T-shirt size information is shown below -
+
+Height(in cms) | Weight(in kgs) | T-Shirt Size
+--- | --- | ---
+158 | 58 | M
+158	| 59 | M
+158	| 63 | M
+160	| 59 | M
+160	| 60 | M
+163	| 60 | M
+163	| 61 | M
+160	| 64 | L
+163	| 64 | L
+165	| 61 | L
+165	| 62 | L
+165	| 65 | L
+168	| 62 | L
+168	| 63 | L
+168	| 66 | L
+170	| 63 | L
+170	| 64 | L
+170	| 68 | L
+      
+      
+**Calculate Similarity based on distance function**
+
+There are many distance functions but Euclidean is the most commonly used measure. It is mainly used when data is continuous.
+
+![distance](https://2.bp.blogspot.com/-VSgHTe470Po/WjhZimqmDgI/AAAAAAAAGiA/j60crf319gM5QVkqMxyCkIPNA78sQkj-ACLcBGAs/s1600/distance.PNG)
+
+The idea to use distance measure is to find the distance (similarity) between new sample and training cases and then finds the k-closest customers to new customer in terms of height and weight.
+New customer named 'Avinash' has height 161cm and weight 61kg.
+
+Euclidean distance between first observation and new observation (Avinash) is as follows - =SQRT((161-158)^2+(61-58)^2)
+            
+Similarly, we will calculate distance of all the training cases with new case and calculates the rank in terms of distance. The smallest distance value will be ranked 1 and considered as nearest neighbor.
+
+**Finding K-Neighbours**
+
+**Let k be 5**. Then the algorithm searches for the 5 customers closest to Avinash, i.e. most similar to Avinash in terms of attributes, and see what categories those 5 customers were in. If 4 of them had ‘Medium T shirt sizes’ and 1 had ‘Large T shirt size’ then your best guess for Avinash is ‘Medium T shirt. See the calculation shown in the snapshot below -
+
+![image](https://2.bp.blogspot.com/-46qXZZx6OKM/WjfXtoYZ8cI/AAAAAAAAGhw/73azNjuB5AoJcSDZ4SSxWVt7n-UDzxO1QCEwYBhgL/s1600/knn.PNG)
+
+In the graph below, binary dependent variable (T-shirt size) is displayed in blue and orange color. 'Medium T-shirt size' is in blue color and 'Large T-shirt size' in orange color. New customer information is exhibited in yellow circle. Four blue highlighted data points and one orange highlighted data point are close to yellow circle. so the prediction for the new case is blue highlighted data point which is Medium T-shirt size.
+
+![nearest_points_graph](https://1.bp.blogspot.com/-KfZqdgwJAHg/WjhfBziLKCI/AAAAAAAAGiU/9gUJHU8ztoMjMXQaAvdtkR-OZdzRrNKfgCLcBGAs/s1600/knn%2Bchart.PNG%22)
 
 ## Lasso
 lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the statistical model it produces.
