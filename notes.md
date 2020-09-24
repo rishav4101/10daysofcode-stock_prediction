@@ -322,11 +322,10 @@ We need to choose some model on which we can train this data. We try to fit a li
 
 Mathematically, we can model the problem as
 
-```
 <center>
     y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
 </center>
-```
+
 where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
 
 Our model will be a function that predicts *y* for a given *x* and our goal is to learn the model parameters (&theta;<sub>0</sub> & &theta;<sub>1</sub> in our case) But what are the best model parameters?
