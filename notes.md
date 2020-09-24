@@ -32,7 +32,7 @@ Identification of individual voices and music from a mesh of sounds at a cocktai
 
 You can refer to the following link to further enhance your understanding
 
-[difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
+[Difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
 
 ## So What exactly are we going to make?
 In these 10 days of Code we will be using ML, taming the Stock market.
@@ -350,6 +350,7 @@ Mathematically, we look at the difference between each real output (ŷ) and our 
 
 
 You can refer to the following video to get a better visualisation of linear regression 
+
 [Linear Regression Analysis](https://www.youtube.com/watch?v=zPG4NjIkCjc)
 
 ## K-nearest neighbors (kNN) 
