@@ -420,6 +420,9 @@ In the graph below, binary dependent variable (T-shirt size) is displayed in blu
 
 ![nearest_points_graph](https://1.bp.blogspot.com/-KfZqdgwJAHg/WjhfBziLKCI/AAAAAAAAGiU/9gUJHU8ztoMjMXQaAvdtkR-OZdzRrNKfgCLcBGAs/s1600/knn%2Bchart.PNG%22)
 
+You can refer to the following video to get a better visualisation of the kNN Algorithm.
+
+[KNN Algorithm](https://youtu.be/wTF6vzS9fy4)
 ## Lasso
 lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the statistical model it produces.
 
