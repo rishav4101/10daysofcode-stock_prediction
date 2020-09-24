@@ -32,7 +32,7 @@ Identification of individual voices and music from a mesh of sounds at a cocktai
 
 You can refer to the following link to further enhance your understanding
 
-![difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
+[difference betwen supervised and unsupervised learning algorithms](https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms)
 
 ## So What exactly are we going to make?
 In these 10 days of Code we will be using ML, taming the Stock market.
@@ -320,13 +320,13 @@ By seeing the above graph, at first you may think that it is impossible to fit a
 
 We need to choose some model on which we can train this data. We try to fit a linear model (i.e. A linear linear relationship between X and Y) on it. A line will fit overall trend of the data appropriately. Graphically, in two dimensions, this results in a line of best fit, although if we have more features or parameters we would refer it as a plane of best fit and so on.
 
-Mathematically, we can model the problem as
+Mathematically, we can model the problem as:
 
 <h4 align="center">
     y = &theta;<sub>0</sub> + &theta;<sub>1</sub>x
 </h4>
 
-where 'y' is the price (in 1000$) and 'x' is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
+where **y** is the price (in 1000$) and **x** is the size (in feet<sup>2</sup>) and &theta;<sub>0</sub> and &theta;<sub>1</sub> are arbitrary constants and we will find out their values.
 
 Our model will be a function that predicts *y* for a given *x* and our goal is to learn the model parameters (&theta;<sub>0</sub> & &theta;<sub>1</sub> in our case) But what are the best model parameters?
 
@@ -349,8 +349,8 @@ To measure error, we define a error function commonly known as **cost function**
 Mathematically, we look at the difference between each real output (ŷ) and our model’s prediction (y). We square these differences to avoid negative numbers and then add them up and take the average. This is a measure of how well our data fits the line and is commonly known as the **mean squared error**.
 
 
-You can refer to the following video to get a visualisation of linear regression 
-![Linear Regression Analysis](https://www.youtube.com/watch?v=zPG4NjIkCjc)
+You can refer to the following video to get a better visualisation of linear regression 
+[Linear Regression Analysis](https://www.youtube.com/watch?v=zPG4NjIkCjc)
 
 ## K-nearest neighbors (kNN) 
 kNN is also a supervised learning algorithm that can be used to solve both classification and regression problems. The main idea behind kNN is that the value or class of a data point is determined by the data points around it.
