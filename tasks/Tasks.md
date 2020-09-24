@@ -19,7 +19,7 @@ Eg :- Linear Regression, Polynomial Regression, LASSO, etc.
 
 ## Task 4 - Use Regression on a basic dataset
 
-Use Linear regression on the very famous diabetes dataset.
+Use Linear regression on the very famous boston house prediction dataset.
 
 
 
