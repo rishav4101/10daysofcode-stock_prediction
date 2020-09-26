@@ -17,11 +17,12 @@ Plot a line graph of any two columns of the above dataframe you created using ma
 ## Task 3 - Understanding basics of supervised Machine learning
 
 Read about how various supervised learning models work.
-Eg :- Linear Regression, Polynomial Regression, LASSO, etc. 
+Eg :- Linear Regression, Polynomial Regression, Logistic Regression etc.
 
 ## Task 4 - Use Regression on a basic dataset
 
 Use Linear regression on the very famous boston house prediction dataset.
 
+## Task 5 - (Bonus Task) 
 
-
+Use Logistic regression on the iris dataset on which we have already worked earliar

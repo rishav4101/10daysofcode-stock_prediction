@@ -20,7 +20,6 @@ Classification problems involve prediction of results in a discrete output. In o
 #### Regression
 In a regression problem, we are trying to predict results within a continuous output, meaning that we are trying to map input variables to some continuous function. Given data about the size of houses on the real estate market, trying to predict their price. Price as a function of size is a continuous output, so this is an example of a regression problem.
 
-
 ### Unsupervised Learning
 Unsupervised learning, on the other hand, allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables. The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data. Unsupervised learning problems can be further categorized into **clustering** and **non clustering** problems.
 
@@ -39,6 +38,11 @@ In these 10 days of Code we will be using ML, taming the Stock market.
 We'll create an application which will predict Stock Prices of a company using Supervised Machine Learning.
 
 We will use libraries like `numpy`, `pandas`, `matplotlib`, `sklearn` and a few others. You may have heard about these libraries or you may be encountering their names for the first time and it may seem like jargon but don't worry, we will walkthrough all of them and make you familiar with them
+
+## Editor / IDE Setup
+We would prefer doing all the coding on an online notebook like `google collab` `kaggle` etc. However if you are comfortable in working on the project on your local machine and by installing all the required dependencies manuall, you are free to do so. We will be using  `google collab` for live coding and other demonstration purposes.
+
+[How to use google collab](https://www.geeksforgeeks.org/how-to-use-google-colab/)
 
 ### NumPy
 Let's start with `NumPy`, Shall we? 
@@ -103,7 +107,7 @@ pip install numpy pandas matplotlib
 You can create a new python file and follow along.
 
 
-```
+```python
 # importing the libraries
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
@@ -117,7 +121,7 @@ We will load the iris data from **csv** file URL.
 
 If you don't know what a csv file is, a comma-separated values (csv) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas.
 
-```
+```python
 # Load Dataset
 
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
@@ -127,7 +131,7 @@ dataset = read_csv(url, names=names)
 
 Now, lets take a look at the data we have loaded. Some of the ways to look at the data are as follows:
 
-```
+```python
 # Dimensions of the dataset
 print(dataset.shape) 
 
@@ -147,7 +151,7 @@ We generally study two types of plots:
 - **Univariate plots** to undersatnd each attribute (box and whisker plots, Histograms, etc)
 - **Multivariate plots** to understand the relationship between varoius attributes (Scatter plots)
 
-```
+```python
 # box and whisker plots
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 pyplot.show()
@@ -155,14 +159,14 @@ pyplot.show()
 ![Univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Box-and-Whisker-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
 
 
-```
+```python
 # histrograms
 dataset.hist()
 pyplot.show()
 ```
 ![Histogram of univariate plot](https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/Histogram-Plots-for-Each-Input-Variable-for-the-Iris-Flowers-Dataset-1024x768.png)
 
-```
+```python
 #scatter plot matrix
 scatter_matrix(dataset)
 pyplot.show()
@@ -238,7 +242,6 @@ So, this was little bit of knowledge about the Stock Market and how to read the 
 
 Now its time to get your hands dirty and begin setting up the project
 
-
 ## Initializing our project
 
 To work with Stock Market prices we first need to get reliable financial data. So where do we get our data from? `yfinance` solves our problem by offering a reliable, threaded, and Pythonic way to download historical market data from Yahoo! finance. And this library is installed pretty much the same way as we have installed other libraries. So go ahead and install it.
@@ -274,7 +277,7 @@ We will split the loaded dataset into two, 80% of which we will use to train, ev
 
 Following is a sample code
 
-```
+```python
 # Split-out validation dataset
 dataset = prices_dataframe.values
 X = ...
@@ -431,7 +434,7 @@ lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is 
 ## Elastic-Net 
 The Elastic-Net is a regularised regression method that linearly combines both penalties i.e. L1 and L2 of the Lasso and Ridge regression methods. It is useful when there are multiple correlated features. The difference between Lasso and Elastic-Net lies in the fact that Lasso is likely to pick one of these features at random while elastic-net is likely to pick both at once.
 
-```
+```python
 # imports
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
@@ -443,7 +446,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 ```
 
-```
+```python
 # Spot-Check Algorithms
 models = []
 models.append((' LR ', LinearRegression()))
