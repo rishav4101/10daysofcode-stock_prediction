@@ -40,7 +40,7 @@ We'll create an application which will predict Stock Prices of a company using S
 We will use libraries like `numpy`, `pandas`, `matplotlib`, `sklearn` and a few others. You may have heard about these libraries or you may be encountering their names for the first time and it may seem like jargon but don't worry, we will walkthrough all of them and make you familiar with them
 
 ## Editor / IDE Setup
-We would prefer doing all the coding on an online notebook like `google collab` `kaggle` etc. However if you are comfortable in working on the project on your local machine and by installing all the required dependencies manuall, you are free to do so. We will be using  `google collab` for live coding and other demonstration purposes.
+We would prefer doing all the coding on an online notebook like `google collab`, `kaggle` etc. However if you are comfortable in working on the project on your local machine and by installing all the required dependencies manually, you are free to do so. We will be using  `google collab` for live coding and other demonstration purposes.
 
 [How to use google collab](https://www.geeksforgeeks.org/how-to-use-google-colab/)
 
